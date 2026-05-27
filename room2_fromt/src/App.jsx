@@ -1,6 +1,6 @@
 import  {useEffect, useRef,createContext, useState} from "react";
 import {io} from "socket.io-client";
-import {Success} from "./success_page/success.jsx"
+import Success from "./success_page/success.jsx"
 import Chat from "./chatpage/chat.jsx";
 import axios from 'axios'
 import Log from "./log_in/login.jsx";
@@ -149,7 +149,7 @@ useEffect(() => {
            <Route path="/chat" element={<Chat/>}/>
            <Route path="/login" element={<Log/>}/>
            <Route path="/successfully_login" element={<Success/>}/>
-           
+
        </Routes>
    </BrowserRouter>
         </AppContext.Provider>

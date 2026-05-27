@@ -3,7 +3,7 @@ import { AppContext, } from "../App";
 import { useContext } from "react";
 import{useNavigate} from "react-router-dom";
 import {Link} from "react-router-dom";
-import {Success} from "../success_page/success"
+import Success from "../success_page/success"
 
 
 const Login=()=>{
