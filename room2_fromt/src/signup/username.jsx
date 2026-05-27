@@ -3,6 +3,7 @@ import { AppContext, } from "../App";
 import { useContext } from "react";
 import{useNavigate} from "react-router-dom";
 import {Link} from "react-router-dom";
+import {Success} from "../success_page/success"
 
 
 const Login=()=>{
@@ -16,6 +17,8 @@ const Login=()=>{
 
          const res=  await  axios.post('http://localhost:8800/api/users',{username,email,password})
              console.log('user created')
+             navigate('/successfully_login')
+
          }
          catch (err) {
              console.log(err)
