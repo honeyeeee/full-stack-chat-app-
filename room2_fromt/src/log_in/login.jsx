@@ -35,7 +35,7 @@ console.log(err)
 
     return(
         <div className="h-screen w-screen text-white text-2xl bg-gray-900 flex justify-center items-center flex-col gap-5 ">
-      <input className=' w-400px h-30px outline-none p-3 bg-transparent border-2 border-white text-white text-2xl rounded-4xl ' type="text" placeholder="username" onChange={(e)=>{
+      <input className=' w-400px h-30px outline-none p-3 bg-transparent border-2 border-white text-white text-2xl rounded-4xl ' type="text" placeholder="email..." onChange={(e)=>{
           setLogUsername(e.target.value)
       }}/>
       <input className=' w-400px h-30px outline-none p-3 bg-transparent border-2 border-white text-white text-2xl rounded-4xl ' type="text" placeholder="Password" onChange={(e)=>{
