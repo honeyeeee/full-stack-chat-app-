@@ -1,0 +1,39 @@
+services:
+  backend:
+    container_name: backend
+    build: ./room2_back
+    ports:
+      - "8800:8800"
+    networks:
+      - connect
+      - bridge  
+
+  frontend:
+    container_name: frontend
+    build: ./room2_fromt
+    ports:
+      - "5173:5173"
+
+    networks:
+      - bridge  
+    
+        
+
+  database:
+    container_name: database
+    # image: mirror.gcr.io/library/mongo:latest
+    image: bitnami/mongodb
+    ports:
+      - "27017:27017"
+
+    networks:
+      - connect  
+    volumes:
+      - mongo_db:/data/db
+
+volumes:
+  mongo_db:
+
+networks:
+  bridge:
+  connect:

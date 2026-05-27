@@ -1,0 +1,17 @@
+name: github
+
+on: push
+
+jobs:
+    test:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: get code
+              uses: actions/checkout@v3
+
+            - name: run docker
+              run: docker compose up --build
+
+            - name: get container
+              run: docker compose up  
