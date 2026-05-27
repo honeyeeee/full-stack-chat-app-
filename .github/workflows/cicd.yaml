@@ -8,10 +8,10 @@ jobs:
 
         steps:
             - name: get code
-              uses: actions/checkout@v3
+              uses: actions/checkout@v4
 
             - name: run docker
-              run: docker compose up --build
+              run: docker compose up --build -d
 
-            - name: get container
-              run: docker compose up  
+            - name: get docker name
+              run: docker compose ps
